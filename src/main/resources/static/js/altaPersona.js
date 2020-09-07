@@ -15,7 +15,6 @@ $(document).ready(
                     telefono: $("#telefono").val()
                 }
                 
-                // DO POST
                 $.ajax({
                     type: "POST",
                     contentType: "application/json",
