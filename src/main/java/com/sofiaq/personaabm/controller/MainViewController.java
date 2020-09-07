@@ -15,9 +15,4 @@ public class MainViewController {
     public String addPersonView(){
         return "persona_alta";
     }
-    
-    @RequestMapping("/editPersonView/{id}")
-    public String editPersonView(){
-         return "persona_alta";
-    }
 }
