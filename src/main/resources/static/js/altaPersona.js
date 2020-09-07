@@ -8,7 +8,7 @@ $(document).ready(
 
             function ajaxPost() {
 
-                var formData = {
+                let formData = {
                     nombre: $("#nombre").val(),
                     apellido: $("#apellido").val(),
                     email: $("#email").val(),
