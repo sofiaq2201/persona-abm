@@ -3,7 +3,6 @@ $(document).ready(function () {
     $(document).on('click', '.editar', function () {
         let parent = $(this).parent().parent();
         let id = $(this).attr('id');
-        console.log(parent);
         let nombre = parent.children("td:nth-child(1)");
         let apellido = parent.children("td:nth-child(2)");
         let email = parent.children("td:nth-child(3)");
@@ -40,7 +39,6 @@ $(document).ready(function () {
                             function ()
                             {
                                 location.reload(true)
-                                //do something special
                             }, 1000);
                     
                 } else {

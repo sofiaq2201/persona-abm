@@ -11,7 +11,9 @@ $(document).ready(
             function ajaxGet() {
                 $.ajax({
                     type: "GET",
+                    contentType: "application/json",
                     url: "getAllPeople",
+                    dataType: 'json',
                     success: function (result) {
                         if (result != null) {
                             
@@ -26,9 +28,7 @@ $(document).ready(
                                                          "</tr>";
                                         $('#personas').append(personas);
                                     });
-                            
                             //console.log("Success: ", result);
-                            
                         } else {
                             $("#getResultDiv").html("<strong>Aun no hay persona enlistadas</strong>");
                             console.log("Fail: ", result);
