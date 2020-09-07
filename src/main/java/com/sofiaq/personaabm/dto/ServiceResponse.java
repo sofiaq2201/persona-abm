@@ -25,5 +25,10 @@ public class ServiceResponse<T> {
         this.data = data;
     }
     
+     public ServiceResponse(String status) {
+        this.status = status;
+        
+    }
+    
     
 }

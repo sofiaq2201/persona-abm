@@ -40,9 +40,11 @@ public class PersonaController {
     }
     
     @PutMapping("/editPerson/{id}")
-    public ResponseEntity<Persona> editPerson(@PathVariable("id") int id, @RequestBody Persona p) throws Exception{
+    public ResponseEntity<Object> editPerson(@PathVariable("id") int id, @RequestBody Persona p) throws Exception{
         personaService.editPersona(id, p);
-        return new ResponseEntity<>(HttpStatus.OK);
+        //return new ResponseEntity<>(HttpStatus.OK);
+        ServiceResponse<Persona> response = new ServiceResponse<Persona>("success", p);
+        return new ResponseEntity<Object>(response, HttpStatus.OK);
     }
     
     @DeleteMapping("/deletePerson/{id}")

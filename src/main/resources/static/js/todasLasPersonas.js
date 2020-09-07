@@ -21,13 +21,13 @@ $(document).ready(
                                                         + " <td>" + persona.apellido + "</td>"
                                                         + " <td>"+ persona.email +"</td>"
                                                         + " <td>"+ persona.telefono +"</td>"
-                                                        + " <td> <a class='btn btn-outline-warning' href='editPersonView/"+ persona.id+"'>Editar</a> \n\
-                                                           <button type='button' class='btn btn-outline-danger'>Eliminar</button></td>"+
+                                                        + " <td> <button class='btn btn-outline-warning editar' id='"+persona.id+"'>Editar</button> \n\
+                                                           <button type='button' class='btn btn-outline-danger eliminar' id='"+persona.id+"'>Eliminar</button></td>"+
                                                          "</tr>";
                                         $('#personas').append(personas);
                                     });
                             
-                            console.log("Success: ", result);
+                            //console.log("Success: ", result);
                             
                         } else {
                             $("#getResultDiv").html("<strong>Aun no hay persona enlistadas</strong>");

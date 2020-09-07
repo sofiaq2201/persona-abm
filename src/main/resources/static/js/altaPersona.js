@@ -25,11 +25,11 @@ $(document).ready(
                     success: function (result) {
                         
                         if (result.status == "success") {
-                            $("#postResultDiv").html("Usuario guardado con éxito");
+                            $("#postResultDiv").html("<p class='text-success'>Usuario guardado con éxito</p>");
                         } else {
                             $("#postResultDiv").html("<strong>Error</strong>");
                         }
-                        console.log(result);
+                       
                     },
                     error: function (e) {
                         alert("Error!");
